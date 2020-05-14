@@ -1078,7 +1078,7 @@ class API
             echo "warning: price expected string got " . gettype($price) . PHP_EOL;
         }
 
-        if ($type === "LIMIT" || $type === "STOP_LOSS_LIMIT" || $type === "TAKE_PROFIT_LIMIT") {
+        if ($type === "LIMIT" || $type === "STOP_LOSS_LIMIT" || $type === "TAKE_PROFIT_LIMIT" || $type === "LIMIT_MAKER") {
             $opt["price"] = $price;
             $opt["timeInForce"] = "GTC";
         }
